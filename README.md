@@ -1,4 +1,4 @@
-# CI Attribute Email Templates
+# Product Attribute Email Templates
 
 This Magento 2 module enables the sending of custom email templates based on specific product attributes in an order. The module allows you to map product attributes to email templates, and when an order is placed, the appropriate email template is sent to the customer based on the attributes of the purchased products.
 
