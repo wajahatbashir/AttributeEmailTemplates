@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Mail/etc/email_templates.xsd">
+    <template id="selfpaced_course_template" label="Self-Paced Course Email" file="selfpaced_course_template.html" type="html" module="CI_AttributeEmailTemplates" area="frontend"/>
+    <template id="bootcamp_template" label="Bootcamp Email" file="bootcamp_template.html" type="html" module="CI_AttributeEmailTemplates" area="frontend"/>
+    <template id="labs_template" label="Labs Email" file="labs_template.html" type="html" module="CI_AttributeEmailTemplates" area="frontend"/>
+    <template id="assessments_template" label="Assessments Email" file="assessments_template.html" type="html" module="CI_AttributeEmailTemplates" area="frontend"/>
+    <template id="subscriptions_template" label="Subscriptions Email" file="subscriptions_template.html" type="html" module="CI_AttributeEmailTemplates" area="frontend"/>
+    <template id="vilt_template" label="VILT Email" file="vilt_template.html" type="html" module="CI_AttributeEmailTemplates" area="frontend"/>
+    <template id="coaching_template" label="Coaching Email" file="coaching_template.html" type="html" module="CI_AttributeEmailTemplates" area="frontend"/>
+</config>

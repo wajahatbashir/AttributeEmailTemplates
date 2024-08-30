@@ -1,0 +1,21 @@
+{
+    "name": "ci/attribute-email-templates",
+    "description": "Magento 2 module for sending distinct email templates based on product attributes.",
+    "require": {
+      "php": ">=7.0.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "MIT"
+    ],
+    "autoload": {
+      "files": [
+        "registration.php"
+      ],
+      "psr-4": {
+        "CI\\AttributeEmailTemplates\\": ""
+      }
+    }
+  }
+  

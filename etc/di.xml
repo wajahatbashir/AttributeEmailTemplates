@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="CI\AttributeEmailTemplates\Logger\Handler">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/attribute_email_templates.log</argument>
+        </arguments>
+    </type>
+    <type name="CI\AttributeEmailTemplates\Logger\Logger">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="system" xsi:type="object">CI\AttributeEmailTemplates\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="CI\AttributeEmailTemplates\Model\Email\Sender">
+        <arguments>
+            <argument name="serializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+
+   <type name="CI\AttributeEmailTemplates\Plugin\OrderSenderPlugin">
+        <arguments>
+            <argument name="customSender" xsi:type="object">CI\AttributeEmailTemplates\Model\Email\Sender</argument>
+            <argument name="logger" xsi:type="object">CI\AttributeEmailTemplates\Logger\Logger</argument>
+            <argument name="scopeConfig" xsi:type="object">Magento\Framework\App\Config\ScopeConfigInterface</argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Sales\Model\Order\Email\Sender\OrderSender">
+        <plugin name="custom_email_sender_plugin" type="CI\AttributeEmailTemplates\Plugin\OrderSenderPlugin" />
+    </type>
+</config>

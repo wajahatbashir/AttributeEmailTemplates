@@ -1,0 +1,11 @@
+<!-- Header -->
+{{template config_path="design/email/header_template"}}
+
+<!-- Body Content -->
+<h1>Hello, {{var order.getCustomerName()}}</h1>
+<p>Thank you for purchasing a Vilt Course!</p>
+<p>Here are the details:</p>
+<!-- Add specific course details here -->
+
+<!-- Footer -->
+{{template config_path="design/email/footer_template"}}
